@@ -1,0 +1,391 @@
+/* =====================================
+   STATS GRID
+===================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+    margin-bottom:30px;
+}
+
+.stat-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+    transition:.3s ease;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(15,23,42,.12);
+}
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #3b82f6,
+        #60a5fa
+    );
+}
+
+.card-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:22px;
+}
+
+.users{
+    background:#3b82f6;
+}
+
+.revenue{
+    background:#10b981;
+}
+
+.orders{
+    background:#f59e0b;
+}
+
+.growth{
+    background:#8b5cf6;
+}
+
+.card-info h4{
+
+    color:#64748b;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+}
+
+.card-info h2{
+
+    font-size:28px;
+
+    margin-bottom:6px;
+}
+
+.card-info span{
+
+    color:#10b981;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+/* =====================================
+   CHARTS
+===================================== */
+
+.charts-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:24px;
+
+    margin-bottom:30px;
+}
+
+/*.chart-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+    transition:.3s ease;
+}*/
+
+
+.chart-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.chart-card:hover{
+
+    transform:translateY(-4px);
+}
+
+.large-chart{
+
+    height:420px;
+}
+
+.chart-card canvas{
+
+    width:100% !important;
+
+    height:320px !important;
+}
+
+/* =====================================
+   TABLE CARD
+===================================== */
+
+.table-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+    margin-bottom:30px;
+}
+
+.table-card table{
+
+    margin-top:15px;
+}
+
+.table-card th{
+
+    color:#475569;
+}
+
+.table-card td{
+
+    font-size:14px;
+}
+
+/* =====================================
+   ACTIVITY CARD
+===================================== */
+
+.activity-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+/* =====================================
+   TIMELINE
+===================================== */
+
+.timeline{
+
+    position:relative;
+
+    padding-left:20px;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:8px;
+
+    width:2px;
+
+    height:100%;
+
+    background:#e2e8f0;
+}
+
+.timeline-item{
+
+    position:relative;
+
+    padding-bottom:24px;
+
+    padding-left:20px;
+}
+
+.timeline-item:last-child{
+
+    padding-bottom:0;
+}
+
+.dot{
+
+    position:absolute;
+
+    left:-18px;
+
+    top:4px;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+    border:3px solid white;
+
+    box-shadow:0 0 0 3px #dbeafe;
+}
+
+.timeline-item p{
+
+    color:#475569;
+
+    font-size:14px;
+}
+
+/* =====================================
+   GLASS EFFECT
+===================================== */
+
+.chart-card,
+.table-card,
+.activity-card{
+
+    backdrop-filter:blur(12px);
+}
+
+/* =====================================
+   DARK MODE SUPPORT
+===================================== */
+
+body.dark .stat-card,
+body.dark .chart-card,
+body.dark .table-card,
+body.dark .activity-card{
+
+    background:#1e293b;
+
+    color:white;
+}
+
+body.dark .card-info h4{
+
+    color:#94a3b8;
+}
+
+body.dark .timeline-item p{
+
+    color:#cbd5e1;
+}
+
+body.dark .timeline::before{
+
+    background:#334155;
+}
+
+body.dark .table-card th{
+
+    color:#e2e8f0;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:1200px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:992px){
+
+    .charts-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .large-chart{
+
+        min-height:auto;
+    }
+}
+
+@media(max-width:768px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .stat-card{
+
+        padding:20px;
+    }
+
+    .chart-card{
+
+        padding:18px;
+    }
+
+    .table-card{
+
+        padding:18px;
+    }
+
+    .activity-card{
+
+        padding:18px;
+    }
+}

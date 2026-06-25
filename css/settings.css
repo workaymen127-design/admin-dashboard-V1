@@ -1,0 +1,236 @@
+/* =====================================
+   SETTINGS CARD
+===================================== */
+
+.settings-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+.settings-card h3{
+
+    margin-bottom:20px;
+}
+
+/* =====================================
+   FORM
+===================================== */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-bottom:18px;
+}
+
+.form-group label{
+
+    font-weight:500;
+
+    color:#475569;
+}
+
+.form-group input{
+
+    padding:12px 15px;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:12px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.form-group input:focus{
+
+    border-color:#3b82f6;
+}
+
+/* =====================================
+   SAVE BUTTON
+===================================== */
+
+.save-btn{
+
+    border:none;
+
+    background:#3b82f6;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.save-btn:hover{
+
+    background:#2563eb;
+}
+
+/* =====================================
+   TOGGLE
+===================================== */
+
+.toggle-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+}
+
+.switch{
+
+    position:relative;
+
+    width:60px;
+
+    height:32px;
+}
+
+.switch input{
+
+    display:none;
+}
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#cbd5e1;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:24px;
+
+    height:24px;
+
+    left:4px;
+
+    top:4px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.3s;
+}
+
+.switch input:checked + .slider{
+
+    background:#3b82f6;
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(28px);
+}
+
+/* =====================================
+   THEME BUTTON
+===================================== */
+
+.theme-btn{
+
+    border:none;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+body.dark .settings-card{
+
+    background:#1e293b;
+
+    color:white;
+}
+
+body.dark .form-group label{
+
+    color:#cbd5e1;
+}
+
+body.dark .form-group input{
+
+    background:#334155;
+
+    border-color:#475569;
+
+    color:white;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:768px){
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
