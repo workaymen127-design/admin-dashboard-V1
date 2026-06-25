@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Users | AdminPro</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/users.css">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>AdminPro</span>
+        </div>
+
+        <ul class="nav-links">
+
+    <li class="active">
+        <a href="index.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="users.html">
+            <i class="fa-solid fa-users"></i>
+            <span>Users</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="orders.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Orders</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+    </li>
+    
+	<li>
+    <a href="login.html">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>Login</span>
+    </a>
+    </li>
+
+  </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="left-top">
+
+                <button id="menuBtn" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-search"></i>
+
+                    <input
+                        type="text"
+                        id="searchUser"
+                        placeholder="Search users..."
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="top-actions">
+
+                <div class="notification">
+
+                    <button id="notifyBtn">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="badge">
+                            5
+                        </span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h4>Notifications</h4>
+
+                        <p>New user joined</p>
+                        <p>User upgraded plan</p>
+                        <p>Profile updated</p>
+
+                    </div>
+
+                </div>
+
+                <div class="profile">
+
+                    <button id="profileBtn">
+
+                        <img
+                            src="https://i.pravatar.cc/40"
+                            alt="avatar"
+                        >
+
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <a href="#">Profile</a>
+                        <a href="#">Account</a>
+                        <a href="#">Logout</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <h1>User Management</h1>
+
+            <p>
+                Manage all users and permissions.
+            </p>
+
+        </section>
+
+        <!-- USER STATS -->
+
+        <section class="users-stats">
+
+            <div class="mini-card">
+                <h4>Total Users</h4>
+                <h2>12,540</h2>
+            </div>
+
+            <div class="mini-card">
+                <h4>Active Users</h4>
+                <h2>10,842</h2>
+            </div>
+
+            <div class="mini-card">
+                <h4>Admins</h4>
+                <h2>24</h2>
+            </div>
+
+            <div class="mini-card">
+                <h4>New This Month</h4>
+                <h2>436</h2>
+            </div>
+
+        </section>
+
+        <!-- TABLE CARD -->
+
+        <section class="users-table-card">
+
+            <div class="table-top">
+
+                <h3>All Users</h3>
+
+                <button class="add-user-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add User
+                </button>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table id="usersTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Joined</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="tableBody">
+
+                        <!-- JS will populate -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- PAGINATION -->
+
+            <div class="pagination" id="pagination">
+
+                <!-- JS Generated -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JS -->
+
+<script src="js/main.js"></script>
+<script src="js/users.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | AdminPro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/analytics.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+            <span class="logo-text">AdminPro</span>
+
+            <button id="collapseBtn">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+        </div>
+
+        <ul class="nav-links">
+
+          <li class="active">
+           <a href="index.html">
+             <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+           </a>
+          </li>
+
+         <li>
+           <a href="users.html">
+            <i class="fa-solid fa-users"></i>
+           <span>Users</span>
+          </a>
+         </li>
+
+         <li>
+          <a href="orders.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Orders</span>
+          </a>
+         </li>
+
+         <li>
+          <a href="analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+          </a>
+         </li>
+
+         <li>
+          <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </a>
+         </li>
+    
+	    <li>
+         <a href="login.html">
+          <i class="fa-solid fa-right-to-bracket"></i>
+         <span>Login</span>
+       </a>
+    </li>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <section class="page-header">
+
+            <h1>Analytics Dashboard</h1>
+            <p>Business performance insights and trends.</p>
+
+        </section>
+
+        <!-- KPI CARDS -->
+
+        <section class="analytics-stats">
+
+            <div class="analytics-card">
+                <h4>Visitors</h4>
+                <h2>58,420</h2>
+            </div>
+
+            <div class="analytics-card">
+                <h4>Sales</h4>
+                <h2>4,125</h2>
+            </div>
+
+            <div class="analytics-card">
+                <h4>Revenue</h4>
+                <h2>$186,540</h2>
+            </div>
+
+            <div class="analytics-card">
+                <h4>Conversion Rate</h4>
+                <h2>6.7%</h2>
+            </div>
+
+        </section>
+
+        <!-- CHARTS -->
+
+        <section class="analytics-grid">
+
+            <div class="chart-box large-chart">
+                <h3>Revenue Trend</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h3>Traffic Sources</h3>
+                <canvas id="trafficChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h3>User Growth</h3>
+                <canvas id="growthChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h3>Device Breakdown</h3>
+                <canvas id="deviceChart"></canvas>
+            </div>
+
+        </section>
+
+        <!-- PRODUCTS -->
+
+        <section class="products-card">
+
+            <h3>Top Performing Products</h3>
+
+            <div class="product-item">
+                <span>Premium Subscription</span>
+                <div class="progress">
+                    <div style="width:90%"></div>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <span>Marketing Toolkit</span>
+                <div class="progress">
+                    <div style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <span>Enterprise Plan</span>
+                <div class="progress">
+                    <div style="width:65%"></div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/analytics.js"></script>
+
+</body>
+</html>

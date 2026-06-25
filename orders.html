@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders | AdminPro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/orders.css">
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+            <span class="logo-text">AdminPro</span>
+
+            <button id="collapseBtn">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+        </div>
+
+        <ul class="nav-links">
+
+    <li class="active">
+        <a href="index.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="users.html">
+            <i class="fa-solid fa-users"></i>
+            <span>Users</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="orders.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Orders</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+    </li>
+    
+	<li>
+    <a href="login.html">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>Login</span>
+    </a>
+    </li>
+
+  </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="left-top">
+
+                <button id="menuBtn" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-search"></i>
+
+                    <input
+                        id="searchOrders"
+                        type="text"
+                        placeholder="Search orders..."
+                    >
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="page-header">
+
+            <h1>Orders Management</h1>
+
+            <p>
+                Track, manage and monitor customer orders.
+            </p>
+
+        </section>
+
+        <!-- Order Stats -->
+
+        <section class="orders-stats">
+
+            <div class="order-stat">
+                <h4>Total Orders</h4>
+                <h2>2,847</h2>
+            </div>
+
+            <div class="order-stat">
+                <h4>Completed</h4>
+                <h2>2,146</h2>
+            </div>
+
+            <div class="order-stat">
+                <h4>Pending</h4>
+                <h2>382</h2>
+            </div>
+
+            <div class="order-stat">
+                <h4>Refunded</h4>
+                <h2>54</h2>
+            </div>
+
+        </section>
+
+        <!-- Orders Table -->
+
+        <section class="orders-card">
+
+            <div class="table-top">
+
+                <h3>Recent Orders</h3>
+
+                <button class="export-btn">
+                    Export CSV
+                </button>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table id="ordersTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Payment</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="ordersBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div id="ordersPagination"
+                 class="pagination">
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/orders.js"></script>
+
+</body>
+</html>

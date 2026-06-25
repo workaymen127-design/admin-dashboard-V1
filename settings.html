@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | AdminPro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>AdminPro</span>
+        </div>
+
+        <ul class="nav-links">
+
+          <li class="active">
+           <a href="index.html">
+             <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+           </a>
+          </li>
+
+         <li>
+           <a href="users.html">
+            <i class="fa-solid fa-users"></i>
+           <span>Users</span>
+          </a>
+         </li>
+
+         <li>
+          <a href="orders.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Orders</span>
+          </a>
+         </li>
+
+         <li>
+          <a href="analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+          </a>
+         </li>
+
+         <li>
+          <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </a>
+         </li>
+    
+	    <li>
+         <a href="login.html">
+          <i class="fa-solid fa-right-to-bracket"></i>
+         <span>Login</span>
+       </a>
+    </li>
+
+  </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="left-top">
+
+                <button id="menuBtn" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h2>Settings</h2>
+
+            </div>
+
+            <div class="top-actions">
+
+                <div class="profile">
+
+                    <button id="profileBtn">
+                        <img src="https://i.pravatar.cc/40" alt="">
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <a href="#">Profile</a>
+                        <a href="#">Logout</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- PROFILE SETTINGS -->
+
+        <section class="settings-card">
+
+            <h3>Profile Settings</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" value="Admin User">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" value="admin@example.com">
+                </div>
+
+            </div>
+
+            <button class="save-btn">
+                Save Changes
+            </button>
+
+        </section>
+
+        <!-- SECURITY -->
+
+        <section class="settings-card">
+
+            <h3>Security</h3>
+
+            <div class="form-group">
+
+                <label>Current Password</label>
+
+                <input type="password">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>New Password</label>
+
+                <input type="password">
+
+            </div>
+
+            <button class="save-btn">
+                Update Password
+            </button>
+
+        </section>
+
+        <!-- NOTIFICATIONS -->
+
+        <section class="settings-card">
+
+            <h3>Notifications</h3>
+
+            <div class="toggle-row">
+
+                <span>Email Notifications</span>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+            <div class="toggle-row">
+
+                <span>Push Notifications</span>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- THEME -->
+
+        <section class="settings-card">
+
+            <h3>Theme</h3>
+
+            <button id="themeToggle" class="theme-btn">
+
+                <i class="fa-solid fa-moon"></i>
+
+                Toggle Dark Mode
+
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

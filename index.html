@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPro Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+    <i class="fa-solid fa-layer-group"></i>
+    <span class="logo-text">AdminPro</span>
+
+    <button id="collapseBtn">
+        <i class="fa-solid fa-angle-left"></i>
+    </button>
+</div>
+
+  <ul class="nav-links">
+
+    <li class="active">
+        <a href="index.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="users.html">
+            <i class="fa-solid fa-users"></i>
+            <span>Users</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="orders.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Orders</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="analytics.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Analytics</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="settings.html">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+    </li>
+    
+	<li>
+    <a href="login.html">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>Login</span>
+    </a>
+    </li>
+
+  </ul>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="left-top">
+
+                <button id="menuBtn" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search anything..."
+                    >
+                </div>
+
+            </div>
+
+            <div class="top-actions">
+
+                <!-- Notification -->
+
+                <div class="notification">
+
+                    <button id="notifyBtn">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="badge">
+                            3
+                        </span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h4>Notifications</h4>
+
+                        <p>New user registered</p>
+                        <p>New order received</p>
+                        <p>Server updated</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Profile -->
+
+                <div class="profile">
+
+                    <button id="profileBtn">
+
+                        <img
+                            src="https://i.pravatar.cc/40"
+                            alt="avatar"
+                        >
+
+                    </button>
+
+                    <div class="profile-menu">
+
+                        <a href="#">Profile</a>
+                        <a href="#">Account</a>
+                        <a href="#">Logout</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE TITLE -->
+
+        <section class="page-header">
+
+            <h1>Dashboard Overview</h1>
+
+            <p>
+                Welcome back, Admin.
+            </p>
+
+        </section>
+
+        <!-- KPI CARDS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="card-icon users">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div class="card-info">
+
+                    <h4>Total Users</h4>
+
+                    <h2 data-target="12540">
+                        0
+                    </h2>
+
+                    <span>
+                        +12% this month
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="card-icon revenue">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+
+                <div class="card-info">
+
+                    <h4>Revenue</h4>
+
+                    <h2 data-target="42300">
+                        0
+                    </h2>
+
+                    <span>
+                        +8% this month
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="card-icon orders">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+                <div class="card-info">
+
+                    <h4>Orders</h4>
+
+                    <h2 data-target="1245">
+                        0
+                    </h2>
+
+                    <span>
+                        +15% this month
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="card-icon growth">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div class="card-info">
+
+                    <h4>Growth</h4>
+
+                    <h2 data-target="18">
+                        0
+                    </h2>
+
+                    <span>
+                        Yearly increase
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CHARTS -->
+
+        <section class="charts-grid">
+
+            <div class="chart-card large-chart">
+
+                <div class="card-header">
+                    <h3>Revenue Overview</h3>
+                </div>
+
+                <canvas id="revenueChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <div class="card-header">
+                    <h3>Traffic Sources</h3>
+                </div>
+
+                <canvas id="trafficChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- TABLE -->
+
+        <section class="table-card">
+
+            <div class="card-header">
+
+                <h3>Recent Orders</h3>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>#1024</td>
+                    <td>John Doe</td>
+
+                    <td>
+                        <span class="status completed">
+                            Completed
+                        </span>
+                    </td>
+
+                    <td>$250</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1025</td>
+                    <td>Sarah Wilson</td>
+
+                    <td>
+                        <span class="status pending">
+                            Pending
+                        </span>
+                    </td>
+
+                    <td>$180</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1026</td>
+                    <td>Alex Brown</td>
+
+                    <td>
+                        <span class="status completed">
+                            Completed
+                        </span>
+                    </td>
+
+                    <td>$620</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ACTIVITY -->
+
+        <section class="activity-card">
+
+            <div class="card-header">
+
+                <h3>Recent Activity</h3>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="dot"></span>
+                    <p>New user registered.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="dot"></span>
+                    <p>Order #1024 completed.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="dot"></span>
+                    <p>Monthly report generated.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
